@@ -13,3 +13,6 @@ export { default as EyeIcon }  from "./eye.svg?raw";
 export { default as Diamond }  from "./diamond.svg?raw";
 export { default as LargeSiteLogo }  from "./large-site-logo.svg?raw";
 export { default as Orbit }  from "./orbit.svg?raw";
+export { default as ServicesPlanet }  from "./services-planet.svg?raw";
+export { default as projectsPlanet }  from "./projects-planet.svg?raw";
+export { default as AboutUsPlanetLink }  from "./about-us-planet-link.svg?raw";
