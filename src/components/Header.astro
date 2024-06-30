@@ -3,12 +3,14 @@ import SiteLogo from "./svgs/site-logo.svg?raw";
 import i18next, { t } from "i18next";
 //@ts-ignore
 import { localizePath } from "astro-i18next";
+import Link from "../components/Link.astro";
+
 ---
 
 <header class="container py-4 flex justify-between text-white">
-  <a href="/">
+  <Link href="/">
     <Fragment set:html={SiteLogo} />
-  </a>
+  </Link>
   <div class="flex items-center gap-7">
     <!-- {i18next.language} -->
     <div class="font-semibold">

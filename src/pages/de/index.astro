@@ -1,20 +1,47 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import Link from "../../components/Link.astro";
 import i18next, { t, changeLanguage } from "i18next";
 //@ts-ignore
-import { localizePath } from "astro-i18next";
+import { ServicesPlanet, projectsPlanet, AboutUsPlanet, AboutUsPlanetLink } from "../../components/svgs/index";
 
 changeLanguage("de");
 ---
 
 <Layout title={t("site.title")}>
-  <main >
-    {t("site.title")}
-	<a href={localizePath(Astro.url.pathname , 'en')}>En</a>
-	<a href={localizePath(Astro.url.pathname , 'de')}>De</a>
+  <main class="container relative  h-[70vh]">
 
+    <section class="lg:w-[80%] mx-auto absolute center-elipse">
+      <svg width="100%" viewBox="0 0 1579 631" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1575.64 64.2357C1583.95 90.2442 1570.11 122.127 1537.6 157.605C1505.11 193.049 1454.1 231.934 1388.44 271.888C1257.13 351.791 1067.3 435.909 850.093 505.292C632.882 574.674 429.443 616.174 276.124 627.189C199.461 632.697 135.358 630.581 88.3397 620.532C41.278 610.473 11.5245 592.513 3.21672 566.504C-5.091 540.496 8.74133 508.613 41.2579 473.136C73.7446 437.691 124.751 398.806 190.411 358.852C321.725 278.949 511.551 194.831 728.762 125.448C945.974 56.0659 1149.41 14.5658 1302.73 3.5507C1379.39 -1.95712 1443.5 0.159388 1490.52 10.2084C1537.58 20.2666 1567.33 38.2272 1575.64 64.2357Z" stroke="white" stroke-opacity="0.2"/>
+      </svg>
+      <Link className="absolute left-[10%] top-[30%] lg:top-[40%]" href="/services">
+        <Fragment set:html={ServicesPlanet} />
+      </Link>
+    </section>
+    <section class="w-[50%] mx-auto absolute center-elipse ">
+      <svg width="100%"  viewBox="0 0 1009 403" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1006.28 41.0658C1011.55 57.572 1002.79 77.8608 982.029 100.508C961.302 123.123 928.749 147.942 886.829 173.45C802.995 224.462 681.798 278.169 543.11 322.469C404.422 366.77 274.533 393.265 176.652 400.298C127.707 403.814 86.7938 402.462 56.7946 396.05C26.7523 389.629 7.84724 378.179 2.57477 361.673C-2.6977 345.167 6.06926 324.878 26.8266 302.231C47.5541 279.616 80.1072 254.797 122.027 229.289C205.861 178.277 327.058 124.57 465.746 80.2696C604.434 35.9693 734.323 9.47364 832.204 2.44138C881.149 -1.07502 922.062 0.277501 952.061 6.68904C982.104 13.1098 1001.01 24.5596 1006.28 41.0658Z" stroke="white" stroke-opacity="0.2"/>
+        </svg>
+      <Link className="absolute -right-[1%] top-[20%] lg:top-[10%]" href="/projects">
+        <Fragment set:html={projectsPlanet} />
+      </Link>
+    </section>
+    <section class="w-[30%] mx-auto absolute center-elipse ">
+      <svg width="100%"  viewBox="0 0 1009 403" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1006.28 41.0658C1011.55 57.572 1002.79 77.8608 982.029 100.508C961.302 123.123 928.749 147.942 886.829 173.45C802.995 224.462 681.798 278.169 543.11 322.469C404.422 366.77 274.533 393.265 176.652 400.298C127.707 403.814 86.7938 402.462 56.7946 396.05C26.7523 389.629 7.84724 378.179 2.57477 361.673C-2.6977 345.167 6.06926 324.878 26.8266 302.231C47.5541 279.616 80.1072 254.797 122.027 229.289C205.861 178.277 327.058 124.57 465.746 80.2696C604.434 35.9693 734.323 9.47364 832.204 2.44138C881.149 -1.07502 922.062 0.277501 952.061 6.68904C982.104 13.1098 1001.01 24.5596 1006.28 41.0658Z" stroke="white" stroke-opacity="0.2"/>
+        </svg>
+      <Link className="absolute left-[10%] top-[20%] lg:top-[20%]" href="/about-us">
+        <Fragment set:html={AboutUsPlanetLink} />
+      </Link>
+    </section>
+    
 
   </main>
 </Layout>
 
-<style></style>
+<style lang="scss">
+.center-elipse {
+  @apply left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 
+}
+</style>
