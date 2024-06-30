@@ -1,0 +1,20 @@
+{
+    "site": {
+        "title": "My awesome website!",
+        "let's_talk":"Let's talk" ,
+        "about_us":"About us" ,
+        "description": "Here is the description of my awesome website!"
+      },
+      "home": {
+        "title": "Welcome to my awesome website!",
+        "subtitle": "This is a <0>more complex</0> string to translate, mixed with <1>html elements</1>, such as a <2>a cool link</2>!"
+      },
+      "about": { 
+        "who_are_we": "Who are we?",
+        "why_janan": "Why Janan ?",
+        "our_mission":"Our Mission" ,
+        "our_vision":"Our Vission" ,
+        "our_value": "Our Value",
+        "our_managment_team": "Our Managment Team"
+      }
+}

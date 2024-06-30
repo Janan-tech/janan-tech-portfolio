@@ -1,0 +1,21 @@
+{
+    "site": {
+        "title": "Mon super site web !",
+        "let's_talk":"Lass uns reden" ,
+        "about_us":"Über uns" ,
+        "description": "Voici la description de mon super site web !"
+      },
+      "home": {
+        "title": "Bienvenue sur mon super site web !",
+        "subtitle": "Ceci est une chaine de charactères <0>plus compliquée</0> à traduire, il y a des <1>éléments html</1>, comme <2>un super lien</2> par exemple !"
+      },
+      "about": {
+        "who_are_we": "Wer sind wir?",
+        "why_janan": "Warum Janan?",
+        "our_mission":"Unsere Aufgabe" ,
+        "our_vision":"Unsere Vision" ,
+        "our_value": "Unser Wert",
+        "our_managment_team": "Unser Management-Team"
+
+      }
+}

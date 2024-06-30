@@ -1,0 +1,30 @@
+---
+import SiteLogo from "./svgs/site-logo.svg?raw";
+import i18next, { t } from "i18next";
+//@ts-ignore
+import { localizePath } from "astro-i18next";
+---
+
+<header class="container py-4 flex justify-between text-white">
+  <div>
+    <Fragment set:html={SiteLogo} />
+
+  </div>
+  <div class="flex items-center gap-7">
+    <!-- {i18next.language} -->
+    <div class="font-semibold">
+      <a
+        class:list={["me-3", { "opacity-65": i18next.language !== "de" }]}
+        href={localizePath(Astro.url.pathname, "de")}>De</a
+      >
+      <a
+        class:list={[{ "opacity-65": i18next.language !== "en" }]}
+        href={localizePath(Astro.url.pathname, "en")}>En</a
+      >
+    </div>
+    <a class="bg-primary rounded-full px-5 py-1 font-bold text-white"
+      >{t("site.let's_talk")}</a
+    >
+ 
+  </div>
+</header>

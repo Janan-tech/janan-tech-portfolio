@@ -1,0 +1,15 @@
+// export { default as ExitIcon } from './exit.svg';
+export { default as YoutubeIcon }  from "./youtube.svg?raw";
+export { default as LinkedIcon }  from "./linkedin.svg?raw";
+export { default as TwitterIcon }  from "./twitter.svg?raw";
+export { default as FacebookIcon }  from "./facebook.svg?raw";
+export { default as GithubIcon }  from "./github.svg?raw";
+export { default as LeftAngleIcon }  from "./left-angle.svg?raw";
+export { default as RightAngleIcon }  from "./right-angle.svg?raw";
+export { default as BrainIcon }  from "./brain.svg?raw";
+export { default as AboutUsPlanet }  from "./about-us-planet.svg?raw";
+export { default as PyramidsIcon }  from "./pyramids.svg?raw";
+export { default as EyeIcon }  from "./eye.svg?raw";
+export { default as Diamond }  from "./diamond.svg?raw";
+export { default as LargeSiteLogo }  from "./large-site-logo.svg?raw";
+export { default as Orbit }  from "./orbit.svg?raw";

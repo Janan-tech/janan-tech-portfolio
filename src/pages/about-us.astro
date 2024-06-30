@@ -1,0 +1,186 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { t, changeLanguage } from "i18next";
+import { LeftAngleIcon, RightAngleIcon, Diamond, AboutUsPlanet, BrainIcon, PyramidsIcon, LargeSiteLogo } from "../components/svgs/index.ts";
+
+changeLanguage("en");
+---
+
+<Layout title={t("site.about_us")}>
+  <main class="container">
+    <section class="max-md:py-8">
+      <div>
+        <p class="flex  gap-5 mb-3 justify-center font-normal text-slate-60">
+          <Fragment set:html={LeftAngleIcon} />
+          <span class="text-gray">{t('about.why_janan')}</span>
+          <Fragment set:html={RightAngleIcon} />
+        </p>
+        <h3 class="text-center font-bold text-4xl">{t("site.about_us")}</h3>
+      </div>
+    </section>
+    <section class="lg:mx-20 flex flex-col-reverse lg:grid lg:grid-cols-2 my-10">
+      <div class="flex flex-col justify-center gap-5">
+        <h4 class="text-3xl font-bold leading-6 max-lg:text-center">{t('about.who_are_we')}</h4>
+        <p class="text-gray text-lg font-normal leading-6 lg:pe-20 max-lg:text-center">
+          Lorem ipsum is placeholder text commonly used in the graphic, print,
+          and publishing industries for previewing layouts and visual mockups
+          Lorem ipsum is placeholder text commonly used in the graphic, print,
+          and publishing industries for previewing layouts and visual mockups.
+        </p>
+      </div>
+      <div class="hidden lg:flex justify-center items-center h-fit max-sm:w-[90%] mx-auto">
+        <Fragment set:html={LargeSiteLogo} />
+      </div>
+    </section>
+    <section class="my-20 bg-[url('assets/images/orbit.svg')] bg-contain bg-no-repeat bg-center" >
+        <h3 class="mb-10 lg:ms-20 max-lg:text-center text-3xl font-bold">{t('about.why_janan')}</h3>      
+        <section class="why-us relative  rounded-[14px] p-6  lg:p-10" style="">
+            <div class="absolute top-0 right-0 -translate-y-1/2">
+                <Fragment set:html={AboutUsPlanet} />
+            </div>     
+            <div>
+                <ul>
+                    <li class="flex gap-4 [&:not(:last-child)]:mb-10 ">
+                        <div>
+                            <Fragment set:html={BrainIcon} />
+                        </div>
+                        <div>
+                            <h5 class="text-2xl font-bold leading-7 mb-3">Lorem ipsum is placeholder</h5>
+                            <p class="text-gray text-lg font-normal leading-27 lg:w-4/5">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4 [&:not(:last-child)]:mb-10 ">
+                        <div>
+                            <Fragment set:html={BrainIcon} />
+                        </div>
+                        <div>
+                            <h5 class="text-2xl font-bold leading-7 mb-3">Lorem ipsum is placeholder</h5>
+                            <p class="text-gray text-lg font-normal leading-27 lg:w-4/5">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4 [&:not(:last-child)]:mb-10 ">
+                        <div>
+                            <Fragment set:html={BrainIcon} />
+                        </div>
+                        <div>
+                            <h5 class="text-2xl font-bold leading-7 mb-3">Lorem ipsum is placeholder</h5>
+                            <p class="text-gray text-lg font-normal leading-27 lg:w-4/5">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </section>
+
+    <section>
+        <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <li class="bg-[#202649] rounded-3xl p-10 ">
+                <Fragment set:html={PyramidsIcon} />
+                <h5 class="font-extrabold text-2xl mt-3">{t('about.our_mission')}</h5>
+                <p class="text-gray leading-7 text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. At autem distinctio adipisci praesentium mollitia possimus sint ea blanditiis perspiciatis consequatur ab tenetur sapiente optio odit, necessitatibus dicta, quas accusantium quae.</p>
+            </li>
+            <li class="bg-[#202649] rounded-3xl p-10 ">
+                <Fragment set:html={PyramidsIcon} />
+                <h5 class="font-extrabold text-2xl mt-3">{t('about.our_vision')}</h5>
+                <p class="text-gray leading-7 text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. At autem distinctio adipisci praesentium mollitia possimus sint ea blanditiis perspiciatis consequatur ab tenetur sapiente optio odit, necessitatibus dicta, quas accusantium quae.</p>
+            </li>
+            <li class="bg-[#202649] rounded-3xl p-10 ">
+                <Fragment set:html={Diamond} />
+                <h5 class="font-extrabold text-2xl mt-3">{t('about.our_value')}</h5>
+                <p class="text-gray leading-7 text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. At autem distinctio adipisci praesentium mollitia possimus sint ea blanditiis perspiciatis consequatur ab tenetur sapiente optio odit, necessitatibus dicta, quas accusantium quae.</p>
+            </li>
+        </ul>
+    </section>
+    
+
+    <section class="my-20">
+        <h4 class="text-3xl font-bold text-center mb-1">{t('about.our_managment_team')}</h4>
+        <p class="text-gray text-xl text-center">MEET THE MANAGEMENT</p>
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-10 py-8">
+            <div class="mx-auto w-full">
+                <div class="ceo h-[calc(100%-80px)]">
+                    <img class="h-full object-cover  max-lg:max-w-96 mx-auto" src="https://s3-alpha-sig.figma.com/img/30c0/37a8/0227d44e08e92261bb128f144d672d81?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GEaAeH2Nz8njGIISk2OhZ-u9uyImmfP09aRucxOOYoXwJ23D7QNiSyHJrmF1rdR3qzdavo68v9o~WX86Y-CaEYraTSQoa35c8fmJCc0yrJzgA7VXi22V08us-GNqX867JynrYbmJjEronlRgbCvaCjnqIoOhcQlRvdrM1aYvmduI-EVCWm-5NXGFD-rCaR6JwQLcBqFkCIGssGWxJuTe0CyvvZpvOsGQVWt5gGhRJDXRObqnj8Oj2w5tA4CkWd5eQrCVyAhBiF~pJlWp9WKc8-BmCONuHLmz3kkoZjnWwdWAmdIvTqJ2NRVCGuFo5kyjgp~5r4pU~lZM5VCgokwngQ" />
+                </div>
+                <h5 class="text-2xl font-bold mb-1 mt-4 max-lg:text-center">Hossam Mohamed</h5>
+                <h6 class="text-gray text-xl max-lg:text-center">Founder & CEO</h6>
+            </div>
+            <div class="lg:col-span-2">
+                <ul class="grid grid-cols-2 gap-8">
+                    <li>
+                        <div class="lol max-h-96">
+                            <img class="h-full  object-cover mx-auto" src="https://s3-alpha-sig.figma.com/img/30c0/37a8/0227d44e08e92261bb128f144d672d81?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GEaAeH2Nz8njGIISk2OhZ-u9uyImmfP09aRucxOOYoXwJ23D7QNiSyHJrmF1rdR3qzdavo68v9o~WX86Y-CaEYraTSQoa35c8fmJCc0yrJzgA7VXi22V08us-GNqX867JynrYbmJjEronlRgbCvaCjnqIoOhcQlRvdrM1aYvmduI-EVCWm-5NXGFD-rCaR6JwQLcBqFkCIGssGWxJuTe0CyvvZpvOsGQVWt5gGhRJDXRObqnj8Oj2w5tA4CkWd5eQrCVyAhBiF~pJlWp9WKc8-BmCONuHLmz3kkoZjnWwdWAmdIvTqJ2NRVCGuFo5kyjgp~5r4pU~lZM5VCgokwngQ" />
+                        </div>
+                        <h5 class="text-2xl font-bold mb-1 mt-4">Hossam Mohamed</h5>
+                        <h6 class="text-gray text-xl">Founder & CEO</h6>
+                    </li>
+                    <li>
+                        <div class="lol max-h-96">
+                            <img class="h-full  object-cover mx-auto" src="https://s3-alpha-sig.figma.com/img/30c0/37a8/0227d44e08e92261bb128f144d672d81?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GEaAeH2Nz8njGIISk2OhZ-u9uyImmfP09aRucxOOYoXwJ23D7QNiSyHJrmF1rdR3qzdavo68v9o~WX86Y-CaEYraTSQoa35c8fmJCc0yrJzgA7VXi22V08us-GNqX867JynrYbmJjEronlRgbCvaCjnqIoOhcQlRvdrM1aYvmduI-EVCWm-5NXGFD-rCaR6JwQLcBqFkCIGssGWxJuTe0CyvvZpvOsGQVWt5gGhRJDXRObqnj8Oj2w5tA4CkWd5eQrCVyAhBiF~pJlWp9WKc8-BmCONuHLmz3kkoZjnWwdWAmdIvTqJ2NRVCGuFo5kyjgp~5r4pU~lZM5VCgokwngQ" />
+                        </div>
+                        <h5 class="text-2xl font-bold mb-1 mt-4">Hossam Mohamed</h5>
+                        <h6 class="text-gray text-xl">Founder & CEO</h6>
+                    </li>
+                    <li>
+                        <div class="lol max-h-96">
+                            <img class="h-full  object-cover mx-auto" src="https://s3-alpha-sig.figma.com/img/30c0/37a8/0227d44e08e92261bb128f144d672d81?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GEaAeH2Nz8njGIISk2OhZ-u9uyImmfP09aRucxOOYoXwJ23D7QNiSyHJrmF1rdR3qzdavo68v9o~WX86Y-CaEYraTSQoa35c8fmJCc0yrJzgA7VXi22V08us-GNqX867JynrYbmJjEronlRgbCvaCjnqIoOhcQlRvdrM1aYvmduI-EVCWm-5NXGFD-rCaR6JwQLcBqFkCIGssGWxJuTe0CyvvZpvOsGQVWt5gGhRJDXRObqnj8Oj2w5tA4CkWd5eQrCVyAhBiF~pJlWp9WKc8-BmCONuHLmz3kkoZjnWwdWAmdIvTqJ2NRVCGuFo5kyjgp~5r4pU~lZM5VCgokwngQ" />
+                        </div>
+                        <h5 class="text-2xl font-bold mb-1 mt-4">Hossam Mohamed</h5>
+                        <h6 class="text-gray text-xl">Founder & CEO</h6>
+                    </li>
+                    <li>
+                        <div class="lol max-h-96">
+                            <img class="h-full  object-cover mx-auto" src="https://s3-alpha-sig.figma.com/img/30c0/37a8/0227d44e08e92261bb128f144d672d81?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GEaAeH2Nz8njGIISk2OhZ-u9uyImmfP09aRucxOOYoXwJ23D7QNiSyHJrmF1rdR3qzdavo68v9o~WX86Y-CaEYraTSQoa35c8fmJCc0yrJzgA7VXi22V08us-GNqX867JynrYbmJjEronlRgbCvaCjnqIoOhcQlRvdrM1aYvmduI-EVCWm-5NXGFD-rCaR6JwQLcBqFkCIGssGWxJuTe0CyvvZpvOsGQVWt5gGhRJDXRObqnj8Oj2w5tA4CkWd5eQrCVyAhBiF~pJlWp9WKc8-BmCONuHLmz3kkoZjnWwdWAmdIvTqJ2NRVCGuFo5kyjgp~5r4pU~lZM5VCgokwngQ" />
+                        </div>
+                        <h5 class="text-2xl font-bold mb-1 mt-4">Hossam Mohamed</h5>
+                        <h6 class="text-gray text-xl">Founder & CEO</h6>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </section>
+  </main>
+</Layout>
+
+<style lang="scss">
+  section.why-us {
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: -4px 8px 13.3px 3px rgba(0, 0, 0, 0.11);
+    backdrop-filter: blur(2.799999952316284px);
+  }
+  .lol{
+    position: relative;
+    @apply overflow-hidden ;
+    // background-color: green;
+
+    &::before {
+        content: '' ;
+        position: absolute;
+        left:50% ;
+        top:0 ;
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        background-color: #5BC4B9;
+
+        @apply -translate-x-1/2 translate-y-1/2 -z-10
+    }
+  }
+  .ceo{
+    position: relative;
+    @apply overflow-hidden ;
+    // background-color: green;
+
+    &::before {
+        content: '' ;
+        position: absolute;
+        left:50% ;
+        top:40% ;
+        width: 600px;
+        height: 600px;
+        border-radius: 100%;
+        background-color: #5BC4B9;
+
+        @apply -translate-x-1/2  -z-10
+    }
+  }
+</style>

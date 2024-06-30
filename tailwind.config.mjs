@@ -8,6 +8,7 @@ export default {
     },
     colors: {
       primary: "var(--primary)",
+      gray: "var(--gray)",
     },
     extend: {},
   },
