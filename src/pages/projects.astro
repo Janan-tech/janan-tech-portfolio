@@ -1,18 +1,90 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import i18next, { t, changeLanguage } from "i18next";
+import { VerticalLine, CaretRight } from "../components/svgs/index";
 
 changeLanguage("en");
+
+const projects = ["oct, 2016", "oct, 2016", "oct, 2016", "oct, 2016"];
 ---
 
 <Layout title={t("site.title")}>
-  <main class="container ">
+  <main class="projects relative">
+    <section class="container lg:px-32 max-lg:pt-10 lg;gap-10 flex flex-col-reverse lg:flex-row justify-between">
+      <div class="pattern">
+        <img
+          class="absolute -z-10 top-1/2 right-0 -translate-y-1/2 h-full max-h-[500px]"
+          src="/assets/images/projects-bg-planet.png"
+        />
+      </div>
+      <div class="flex min-h-96 gap-10 items-center">
+        <ul class="relative">
+          <div class="absolute top-1/2 -translate-y-1/2 right-6">
+            <Fragment set:html={VerticalLine} />
+          </div>
+          {
+            projects.map((project, ind) => {
+              const isActive = ind == 2;
+              return (
+                <li
+                  class={`flex gap-16 opacity-70  items-center justify-between ${isActive ? "opacity-100 text-xl" : ""} mb-1 py-4 text-nowrap`}
+                >
+                  <span>{project}</span>
+                  {isActive && (
+                    <span>
+                      <Fragment set:html={CaretRight} />
+                    </span>
+                  )}
+                </li>
+              );
+            })
+          }
+        </ul>
 
-    
-
+        <div class="">
+          <h2 class="text-3xl font-bold opacity-80">Commonsplace</h2>
+          <div
+            class="my-4"
+            style="height:1px ;background: linear-gradient(90deg, rgba(255, 255, 255, 0.60) 0%, rgba(255, 255, 255, 0.00) 100%);"
+          >
+          </div>
+          <p class="text-gray leading-6 me-[20%]">
+            Lorem ipsum is placeholder text commonly used in the graphic, print.
+          </p>
+          <a
+            href="https://commonsplace.de/"
+            class="text-[#F0803C] underline mt-2 block"
+          >
+            commonsplace.de
+          </a>
+        </div>
+        <div></div>
+      </div>
+      <div class="basis-1/2 flex items-center justify-center">
+        <div class="h-64 lg:h-56 xl:h-64 aspect-video rounded-xl overflow-hidden">
+          <img class="w-full h-full" src="/assets/images/project.avif" />
+        </div>
+      </div>
+    </section>
   </main>
 </Layout>
 
 <style lang="scss">
+  .projects {
+    position: relative;
 
+    // &::after {
+    //   content: url('assets/images/projects-bg-planet.png') ;
+    //   position: absolute;
+    //   // width: 200px;
+    //   height: 100%;
+    //   overflow: hidden;
+    //   right: 0;
+    //   top: 0;
+    //   // bottom: 0;
+    //   // max-width: 200px;
+    //   // overflow: hid;
+    //   display: block;
+    // }
+  }
 </style>
