@@ -16,5 +16,11 @@
         "our_vision":"Our Vission" ,
         "our_value": "Our Value",
         "our_managment_team": "Our Managment Team"
+      }, 
+      "common": {
+        "projects": "Projects", 
+        "our_portfolio": "Our portfolio",
+        "blogs":"Blogs",
+        "blogs_&_news": "Blogs & News"
       }
 }

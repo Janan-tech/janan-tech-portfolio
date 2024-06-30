@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import i18next, { t, changeLanguage } from "i18next";
 import { VerticalLine, CaretRight } from "../../components/svgs/index";
+import PageHeading from "../../components/PageHeading.astro";
 
 changeLanguage("de");
 
@@ -9,7 +10,10 @@ const projects = ["oct, 2016", "oct, 2016", "oct, 2016", "oct, 2016"];
 ---
 
 <Layout title={t("site.title")}>
-  <main class="projects relative">
+  <main class="projects relative mb-10">
+    <section class="max-md:py-8">
+      <PageHeading heading={t("common.projects")} subHeading={t('common.our_portfolio')} />
+    </section>
     <section class="container lg:px-32 max-lg:pt-10 lg;gap-10 flex flex-col-reverse lg:flex-row justify-between">
       <div class="pattern">
         <img

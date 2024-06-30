@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import { t, changeLanguage } from "i18next";
 import { LeftAngleIcon, RightAngleIcon, Diamond, AboutUsPlanet, BrainIcon, PyramidsIcon, LargeSiteLogo } from "../components/svgs/index.ts";
+import PageHeading from "../components/PageHeading.astro";
 
 changeLanguage("en");
 ---
@@ -9,14 +10,7 @@ changeLanguage("en");
 <Layout title={t("site.about_us")}>
   <main class="container">
     <section class="max-md:py-8">
-      <div>
-        <p class="flex  gap-5 mb-3 justify-center font-normal text-slate-60">
-          <Fragment set:html={LeftAngleIcon} />
-          <span class="text-gray">{t('about.why_janan')}</span>
-          <Fragment set:html={RightAngleIcon} />
-        </p>
-        <h3 class="text-center font-bold text-4xl">{t("site.about_us")}</h3>
-      </div>
+      <PageHeading heading={t("site.about_us")} subHeading={t('about.why_janan')} />
     </section>
     <section class="lg:mx-20 flex flex-col-reverse lg:grid lg:grid-cols-2 my-10">
       <div class="flex flex-col justify-center gap-5">

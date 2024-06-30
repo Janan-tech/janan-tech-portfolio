@@ -1,0 +1,117 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Link from "../../../components/Link.astro";
+import i18next, { t, changeLanguage } from "i18next";
+//@ts-ignore
+import { ServicesPlanet, projectsPlanet, AboutUsPlanet, AboutUsPlanetLink, } from "../../../components/svgs/index";
+import PageHeading from "../../../components/PageHeading.astro";
+
+changeLanguage("de");
+---
+
+<Layout title={t("site.title")}>
+  <main class="container mb-8">
+    <section class="max-md:py-8 pb-8">
+      <PageHeading
+        heading={t("common.blogs")}
+        subHeading={t("common.blogs_&_news")}
+      />
+    </section>
+    <section class="flex justify-center gap-10">
+      <div class="mt-5 basis-2/5">
+        <div class="flex items-center justify-end gap-5">
+          <h5 class="text-gray">By Ahmed Abdullah</h5>
+          <span class="h-8 w-[1px] bg-gray mt-1"></span>
+          <p>02.06.2024</p>
+          <span class="w-8 h-[1px] bg-gray mt-1"></span>
+        </div>
+        <p class="my-3 text-primary text-end font-bold">
+          Lorem ipsum is placeholder text commonly used in .print, and
+          publishing industries for
+        </p>
+        <p class="text-end leading-7 text-sm">
+          Lorem ipsum is placeholder text commonly used in the graphic, print,
+          and publishing industries for previewing layouts and visual mockups.
+        </p>
+      </div>
+      <div class="flex flex-col items-center gap-5">
+        <img width="70" src="/assets/images/planet-purple.png" />
+        <div
+          class="grow w-[1px]"
+          style="background: rgba(255, 255, 255, 0.40);"
+        >
+        </div>
+      </div>
+      <a href="" class="basis-2/5 mt-6 aspect-video rounded-xl overflow-hidden">
+        <img class="w-full h-full" src="/assets/images/project.avif" />
+      </a>
+    </section>
+
+    <br />
+
+    <section class="flex justify-center gap-10">
+      <div class="basis-2/5 mt-6 aspect-video rounded-xl overflow-hidden">
+        <img class="w-full h-full" src="/assets/images/project.avif" />
+      </div>
+      <div class="flex flex-col items-center gap-5">
+        <img width="70" src="/assets/images/planet-purple.png" />
+        <div
+          class="grow w-[1px]"
+          style="background: rgba(255, 255, 255, 0.40);"
+        >
+        </div>
+      </div>
+
+      <div class="mt-5 basis-2/5">
+        <div class="flex items-center gap-5">
+          <h5 class="text-gray">By Ahmed Abdullah</h5>
+          <span class="h-8 w-[1px] bg-gray mt-1"></span>
+          <p>02.06.2024</p>
+          <span class="w-8 h-[1px] bg-gray mt-1"></span>
+        </div>
+        <p class="my-3 text-primary font-bold">
+          Lorem ipsum is placeholder text commonly used in .print, and
+          publishing industries for
+        </p>
+        <p class=" leading-7 text-sm">
+          Lorem ipsum is placeholder text commonly used in the graphic, print,
+          and publishing industries for previewing layouts and visual mockups.
+        </p>
+      </div>
+    </section>
+
+    <br />
+
+    <section class="flex justify-center gap-10">
+      <div class="mt-5 basis-2/5">
+        <div class="flex items-center justify-end gap-5">
+          <h5 class="text-gray">By Ahmed Abdullah</h5>
+          <span class="h-8 w-[1px] bg-gray mt-1"></span>
+          <p>02.06.2024</p>
+          <span class="w-8 h-[1px] bg-gray mt-1"></span>
+        </div>
+        <p class="my-3 text-primary text-end font-bold">
+          Lorem ipsum is placeholder text commonly used in .print, and
+          publishing industries for
+        </p>
+        <p class="text-end leading-7 text-sm">
+          Lorem ipsum is placeholder text commonly used in the graphic, print,
+          and publishing industries for previewing layouts and visual mockups.
+        </p>
+      </div>
+      <div class="flex flex-col items-center gap-5">
+        <img width="70" src="/assets/images/planet-purple.png" />
+        <div
+          class="grow w-[1px]"
+          style="background: rgba(255, 255, 255, 0.40);"
+        >
+        </div>
+      </div>
+      <div class="basis-2/5 mt-6 aspect-video rounded-xl overflow-hidden">
+        <img class="w-full h-full" src="/assets/images/project.avif" />
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style lang="scss"></style>

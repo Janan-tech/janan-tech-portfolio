@@ -1,0 +1,53 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Link from "../../components/Link.astro";
+import i18next, { t, changeLanguage } from "i18next";
+//@ts-ignore
+import { ServicesPlanet, projectsPlanet, AboutUsPlanet, AboutUsPlanetLink, } from "../../components/svgs/index";
+import PageHeading from "../../components/PageHeading.astro";
+
+changeLanguage("en");
+
+export function getStaticPaths() {
+    return [
+        { params: { blogId: "clifford" } },
+        { params: { blogId: "rover" } },
+        { params: { blogId: "spot" } },
+    ];
+}
+const { blogId } = Astro.params;
+---
+
+<Layout title={t("site.title")}>
+  <main class="container mb-8">
+    <section class="max-md:py-8 pb-8">
+      <PageHeading
+        heading={t("common.blogs")}
+        subHeading={t("common.blogs_&_news")}
+      />
+    </section>
+    <section class="lg:px-40">
+      <section>
+        <div class="banner rounded-lg overflow-hidden h-60">
+          <img
+            src="/assets/images/robot-hand.jfif"
+            class="w-full h-full object-cover object-center"
+          />
+        </div>
+        <div class="my-5 flex items-center justify-center gap-5">
+            <img width="70" src="/assets/images/planet-purple.png" />
+            <h5 class="text-gray">By Ahmed Abdullah</h5>
+            <span class="h-6 w-[1px] bg-gray mt-1"></span>
+            <p>02.06.2024</p>
+        </div>
+        <p class="mb-5 text-primary text-center text-lg lg:px-32 font-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia ab ullam explicabo aut volupta. </p>
+        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit amet fringilla augue, sit amet ullamcorper elit. Donec at erat sagittis, dictum velit eget, lacinia erat. Phasellus vel interdum lectus. Nulla pharetra, enim et suscipit euismod, nulla sapien facilisis libero, eget blandit elit justo et turpis. Vestibulum ut commodo tellus. Mauris ut risus vel lorem consectetur rutrum. Ut maximus semper hendrerit. Donec non vestibulum purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla in lobortis quam. Vivamus in tempor quam, sit amet condimentum augue. Maecenas id scelerisque libero, nec vehicula ipsum. Curabitur sit amet semper nulla, sit amet sagittis nisi. Cras et justo ultricies, volutpat turpis quis, vestibulum quam.
+            Mauris id consectetur nisi, in tempus orci. Mauris varius enim vitae vehicula imperdiet. Ut malesuada tortor elit. Mauris convallis iaculis felis id rutrum. Suspendisse potenti. Morbi eu quam et est iaculis molestie. Cras arcu diam, tincidunt eu dictum ut, elementum ut tortor. Nam at rutrum felis, eu finibus justo. In tristique hendrerit felis. Duis tincidunt accumsan ultricies. Vivamus elementum in neque id tempor.
+            Praesent ultricies dui eu feugiat fringilla. Nunc vitae dui vitae elit volutpat aliquet vitae sed massa. Vivamus ullamcorper feugiat blandit. Aliquam at lacinia quam. Etiam euismod augue erat, auctor fermentum lacus laoreet at. Maecenas in tellus sit amet nibh convallis tincidunt vitae venenatis diam. Praesent feugiat eleifend urna, eu ultrices urna feugiat eu.
+            </p>
+      </section>
+    </section>
+  </main>
+</Layout>
+
+<style lang="scss"></style>

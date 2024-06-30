@@ -17,5 +17,11 @@
         "our_value": "Unser Wert",
         "our_managment_team": "Unser Management-Team"
 
+      },
+      "common": {
+        "projects": "Projekte", 
+        "our_portfolio": "Unser Portfolio",
+        "blogs":"Blogs",
+        "blogs_&_news": "Blogs und Nachrichten"
       }
 }
