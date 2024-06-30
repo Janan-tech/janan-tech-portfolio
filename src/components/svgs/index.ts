@@ -16,5 +16,6 @@ export { default as Orbit }  from "./orbit.svg?raw";
 export { default as ServicesPlanet }  from "./services-planet.svg?raw";
 export { default as projectsPlanet }  from "./projects-planet.svg?raw";
 export { default as AboutUsPlanetLink }  from "./about-us-planet-link.svg?raw";
+export { default as BlogsPlanetLink }  from "./blogs-planet-link.svg?raw";
 export { default as VerticalLine }  from "./vertical-line.svg?raw";
 export { default as CaretRight }  from "./caret-right.svg?raw";
